@@ -1,0 +1,22 @@
+{
+  "name": "Max1720x",
+  "version": "1.0.0",
+  "keywords": "max17201,max17205,max17211,max17215,battery,fuel,gauge",
+  "description": "Arduino library for interfacing with the MAX1720x battery fuel gauge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheSleepySnail/Arduino-MAX1720x.git"
+  },
+  "authors": [
+    {
+      "name": "Sleepy Snail",
+      "email": "***REMOVED***",
+      "maintainer": true
+    }
+  ],
+  "exclude": [
+    ".github"
+  ],
+  "frameworks": "arduino",
+  "platforms": "*"
+}
