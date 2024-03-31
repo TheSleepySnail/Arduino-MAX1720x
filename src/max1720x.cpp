@@ -10,8 +10,8 @@ Max1720x::Max1720x(TwoWire *twoWire, uint16_t _shunt) {
 	wire = twoWire;
 	rSense = _shunt * 100;
 	shunt = (double) _shunt / 1000;
-	factCapacity = 5 / shunt / 1000;
-	factCurrent = 0.0015625 / shunt / 1000;
+	factCapacity = 5 / shunt;
+	factCurrent = 0.0015625 / shunt;
 }
 
 uint8_t Max1720x::configure(Max1720xConfiguration config) {
@@ -67,7 +67,7 @@ double Max1720x::readVoltage(uint16_t registerAddress) {
 }
 
 double Max1720x::readCurrent(uint16_t registerAddress) {
-	return readRegister(registerAddress) * factCurrent;
+	return (int16_t)readRegister(registerAddress) * factCurrent;
 }
 
 double Max1720x::readTemperature(uint16_t registerAddress) {
